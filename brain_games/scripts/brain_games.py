@@ -1,3 +1,4 @@
+#!usr/bin/env python
 def main():
     print('Weclome to the Brain Games!')
 if __name__ == '__main__':
