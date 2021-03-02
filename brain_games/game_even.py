@@ -24,7 +24,7 @@ def main_game_interface():
     """interacts with user"""
     print('Answer "yes" if the number is even, otherwise answer "no".')
     wins_number = 0
-    while wins_nubmer < 3:
+    while wins_number < 3:
         random_number = random.randint(0, 1000)
         print('Question: {}'.format(random_number))
         answer = get_answer()
