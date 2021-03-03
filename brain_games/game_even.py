@@ -2,11 +2,12 @@
 
 
 import random
+
 import prompt
 
 
-def is_even_or_not(number):
-    """cheks if number is even and returns yes or no"""
+def is_even(number):
+    """Made to check if number is even and return yes or no."""
     if number == 0:
         return 'yes'
     if number % 2 == 0:
@@ -14,25 +15,20 @@ def is_even_or_not(number):
     return 'no'
 
 
-def get_answer():
-    """Gets and returns user's answer"""
-    answer = prompt.string('Your answer: ')
-    return answer
-
-
 def main_game_interface():
-    """interacts with user"""
+    """Interacts with user and return win or lose."""
     print('Answer "yes" if the number is even, otherwise answer "no".')
     wins_number = 0
     while wins_number < 3:
-        random_number = random.randint(0, 1000)
-        print('Question: {}'.format(random_number))
-        answer = get_answer()
-        if answer == is_even_or_not(random_number):
+        random_num = random.randint(0, 1000)
+        print('Question: {0}'.format(random_num))
+        answer = prompt.string('Your answer: ')
+        if answer == is_even(random_num):
             print('Correct')
             wins_number += 1
         else:
-            print('\'{0}\' is wrong answer ;(. Correct answer was \'{1}\'.'.format(answer, is_even_or_not(random_number)))
+            message = ' is wrong answer ;(. Correct answer was '
+            print("'{0}'{1}'{2}'".format(answer, message, is_even(random_num)))
             return 'lose'
     if wins_number == 3:
         return 'win'

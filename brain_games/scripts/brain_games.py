@@ -6,10 +6,9 @@ from brain_games.cli import welcome_user
 
 
 def main():
-    """Made to print weclome message."""
+    """Made to print weclome message and return user's name."""
     print('Weclome to the Brain Games!')
-    name = welcome_user()
-    return name
+    return welcome_user()
 
 
 if __name__ == '__main__':
