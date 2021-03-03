@@ -9,7 +9,7 @@ authors = ["andrew <isbushcar@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-prompt = "^0.1.o"
+prompt = "^0.1.0"
 
 [tool.poetry.dev-dependencies]
 wemake-python-styleguide = "^0.15.2"
