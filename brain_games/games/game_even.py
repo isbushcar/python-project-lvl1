@@ -15,7 +15,7 @@ def is_even(number):
     return 'no'
 
 
-def game_even():
+def brain_game_even():
     """Interacts with user and return win or lose."""
     print('Answer "yes" if the number is even, otherwise answer "no".')
     wins_number = 0
