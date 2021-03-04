@@ -1,9 +1,9 @@
 """Contains brain-GCD game."""
 
 
-import prompt
-
 import random
+
+import prompt
 
 
 def generate_numbers():
@@ -15,18 +15,24 @@ def generate_numbers():
         divisor = number_two
         while divisor > 1:
             if number_one % divisor == 0 and number_two % divisor == 0:
-                if random.randint(0, 1) == 0:
-                    return (number_two, number_one, divisor)
                 return (number_one, number_two, divisor)
             divisor -= 1
 
 
+def mix_numbers(result_of_generation):
+    """Mix generated numbers and return them with greatest common divisor."""
+    (number_one, number_two, divisor) = result_of_generation
+    if random.randint(0, 1) == 0:
+        return (number_two, number_one, divisor)
+    return (number_one, number_two, divisor)
+
+
 def brain_game_gcd():
-    """Interact with user and return 'win' or 'lose'"""
+    """Interact with user and return 'win' or 'lose'."""
     print('Find the greatest common divisor of given numbers.')
     wins_number = 0
     while wins_number < 3:
-        (number_one, number_two, divisor) = generate_numbers()
+        (number_one, number_two, divisor) = mix_numbers(generate_numbers())
         print('Question: {0} {1}'.format(number_one, number_two))
         answer = prompt.integer('Your answer: ')
         if answer == divisor:
