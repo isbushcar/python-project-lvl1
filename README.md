@@ -3,3 +3,4 @@
 <a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
 ![Linter Status](https://github.com/isbushcar/python-project-lvl1/actions/workflows/make-linter.yml/badge.svg)
 [![asciicast](https://asciinema.org/a/7W1X4LFWtD7ZqHhi2rokuqQYa.svg)](https://asciinema.org/a/7W1X4LFWtD7ZqHhi2rokuqQYa)
+[![asciicast](https://asciinema.org/a/81ISdXiZABommxi0khoi02Qe3.svg)](https://asciinema.org/a/81ISdXiZABommxi0khoi02Qe3)
