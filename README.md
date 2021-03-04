@@ -4,3 +4,4 @@
 ![Linter Status](https://github.com/isbushcar/python-project-lvl1/actions/workflows/make-linter.yml/badge.svg)
 [![asciicast](https://asciinema.org/a/7W1X4LFWtD7ZqHhi2rokuqQYa.svg)](https://asciinema.org/a/7W1X4LFWtD7ZqHhi2rokuqQYa)
 [![asciicast](https://asciinema.org/a/81ISdXiZABommxi0khoi02Qe3.svg)](https://asciinema.org/a/81ISdXiZABommxi0khoi02Qe3)
+[![asciicast](https://asciinema.org/a/KQ97yl1CoEDJeNWy688Gs5Qb0.svg)](https://asciinema.org/a/KQ97yl1CoEDJeNWy688Gs5Qb0)

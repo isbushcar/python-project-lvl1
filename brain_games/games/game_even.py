@@ -16,11 +16,11 @@ def is_even(number):
 
 
 def brain_game_even():
-    """Interacts with user and return win or lose."""
+    """Interact with user and return win or lose."""
     print('Answer "yes" if the number is even, otherwise answer "no".')
     wins_number = 0
     while wins_number < 3:
-        random_num = random.randint(0, 1000)
+        random_num = random.randint(0, 100)
         print('Question: {0}'.format(random_num))
         answer = prompt.string('Your answer: ')
         if answer == is_even(random_num):
