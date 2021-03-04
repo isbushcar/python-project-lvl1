@@ -1,4 +1,4 @@
-"""Contains brain-even game."""
+"""Contains brain-calc game."""
 
 
 import random
@@ -6,27 +6,41 @@ import random
 import prompt
 
 
-def is_even(number):
-    """Made to check if number is even and return yes or no."""
-    if number == 0:
-        return 'yes'
-    if number % 2 == 0:
-        return 'yes'
-    return 'no'
+def expression_generator():
+    """Generate expression, return string with it and its result."""
+    operator_number = random.randint(1, 3)
+    if operator_number == 1:
+        number_a = random.randint(0, 100)
+        number_b = random.randint(0, 100)
+        expression_result = number_a + number_b
+        expression_string = '{0} + {1}'.format(str(number_a), str(number_b))
+        return (expression_string, expression_result)
+    if operator_number == 2:
+        number_a = random.randint(0, 100)
+        number_b = random.randint(0, number_a)
+        expression_result = number_a - number_b
+        expression_string = '{0} - {1}'.format(str(number_a), str(number_b))
+        return (expression_string, expression_result)
+    if operator_number == 3:
+        number_a = random.randint(0, 100)
+        number_b = random.randint(0, 10)
+        expression_result = number_a * number_b
+        expression_string = '{0} * {1}'.format(str(number_a), str(number_b))
+        return (expression_string, expression_result)
 
 
-def game_even():
+def brain_game_calc():
     """Interacts with user and return win or lose."""
-    print('Answer "yes" if the number is even, otherwise answer "no".')
+    print('What is the result of the expression?')
     wins_number = 0
     while wins_number < 3:
-        random_num = random.randint(0, 1000)
-        print('Question: {0}'.format(random_num))
-        answer = prompt.string('Your answer: ')
-        if answer == is_even(random_num):
+        (expression_string, expression_result) = expression_generator()
+        print('Question: {0}'.format(expression_string))
+        answer = prompt.integer('Your answer: ')
+        if answer == expression_result:
             print('Correct')
             wins_number += 1
         else:
-            return (answer, is_even(random_num), 'lose')
+            return (answer, expression_result, 'lose')
     if wins_number == 3:
         return 'win'
