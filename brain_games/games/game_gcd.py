@@ -36,9 +36,8 @@ def brain_game_gcd():
         print('Question: {0} {1}'.format(number_one, number_two))
         answer = prompt.integer('Your answer: ')
         if answer == divisor:
-            print('Correct')
+            print('Correct!')
             wins_number += 1
         else:
             return (answer, divisor, 'lose')
-    if wins_number == 3:
-        return 'win'
+    return 'win'

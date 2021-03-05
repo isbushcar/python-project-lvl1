@@ -3,7 +3,7 @@ packages = [
    { include = "brain_games" },
 ]
 name = "hexlet-code"
-version = "0.9.0"
+version = "0.10.0"
 description = ""
 authors = ["andrew <isbushcar@gmail.com>"]
 
@@ -24,3 +24,4 @@ brain-games = "brain_games.scripts.brain_games:main"
 brain-even = "brain_games.scripts.brain_even:main"
 brain-calc = "brain_games.scripts.brain_calc:main"
 brain-gcd = "brain_games.scripts.brain_gcd:main"
+brain-progression = "brain_games.scripts.brain_progression:main"

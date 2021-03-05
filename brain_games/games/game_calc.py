@@ -38,9 +38,8 @@ def brain_game_calc():
         print('Question: {0}'.format(expression_string))
         answer = prompt.integer('Your answer: ')
         if answer == expression_result:
-            print('Correct')
+            print('Correct!')
             wins_number += 1
         else:
             return (answer, expression_result, 'lose')
-    if wins_number == 3:
-        return 'win'
+    return 'win'
