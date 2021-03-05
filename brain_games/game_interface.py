@@ -16,5 +16,5 @@ def game_end(game_result, name):
         print('Congratulations, {0}!'.format(name))
     if game_result[2] == 'lose':
         message = ' is wrong answer ;(. Correct answer was '
-        print("'{0}'{1}'{2}'".format(game_result[0], message, game_result[1]))
+        print("'{0}'{1}'{2}'.".format(game_result[0], message, game_result[1]))
         print("Let's try again, {0}!".format(name))
