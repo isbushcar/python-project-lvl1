@@ -38,7 +38,7 @@ def hide_number(progression):
 
 
 def brain_game_progression():
-    """Interacts with user and return 'win' or 'lose'."""
+    """Interacts with user and returns 'win' or 'lose'."""
     print('What number is missing in the progression?')
     wins_number = 0
     while wins_number < 3:
