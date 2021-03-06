@@ -33,7 +33,7 @@ def hide_number(progression):
         else:
             changed_progression += '{0} '.format(str(progression[index_number]))
             index_number += 1
-    changed_progression = changed_progression[0:len(changed_progression) - 1]
+    changed_progression = changed_progression[:len(changed_progression) - 1]
     return (changed_progression, hidden_number)
 
 

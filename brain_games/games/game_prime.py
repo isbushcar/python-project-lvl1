@@ -19,7 +19,7 @@ def is_prime(number):
 
 
 def brain_game_prime():
-    """Shows qShows question, ask answers and checks if it's correct."""
+    """Made to show question, ask answer and check if it's correct."""
     print('Answer "yes" if given number is prime. Otherwise answer "no".')
     wins_number = 0
     while wins_number < 3:
