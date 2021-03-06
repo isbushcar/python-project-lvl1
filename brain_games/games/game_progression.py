@@ -7,7 +7,7 @@ import prompt
 
 
 def generate_progression():
-    """Generate progression and return it."""
+    """Generates progression and returns it."""
     progression_length = random.randint(5, 10)
     progression_step = random.randint(1, 10)
     current_number = random.randint(1, 10)
