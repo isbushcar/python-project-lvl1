@@ -8,15 +8,14 @@ import prompt
 
 def generate_numbers():
     """Generate two numbers, return them with their greatest common divisor."""
-    divisor_exists = 0
-    while divisor_exists < 1:
-        number_one = random.randint(1, 100)
-        number_two = random.randint(1, number_one)
-        divisor = number_two
-        while divisor > 1:
-            if number_one % divisor == 0 and number_two % divisor == 0:
-                return (number_one, number_two, divisor)
-            divisor -= 1
+    number_one = random.randint(1, 100)
+    number_two = random.randint(1, number_one)
+    divisor = number_two
+    while divisor > 1:
+        if number_one % divisor == 0 and number_two % divisor == 0:
+            return (number_one, number_two, divisor)
+        divisor -= 1
+    return generate_numbers()
 
 
 def mix_numbers(result_of_generation):
@@ -34,6 +33,7 @@ def brain_game_gcd():
     while wins_number < 3:
         (number_one, number_two, divisor) = mix_numbers(generate_numbers())
         print('Question: {0} {1}'.format(number_one, number_two))
+        print(divisor)
         answer = prompt.integer('Your answer: ')
         if answer == divisor:
             print('Correct!')
