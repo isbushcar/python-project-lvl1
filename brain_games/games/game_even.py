@@ -24,4 +24,4 @@ def brain_game_even(wins_number):
     answer = prompt.string('Your answer: ')
     if answer == is_even(random_num):
         return 'win'
-    return (answer, is_even(random_num), 'lose')
+    return 'lose', answer, is_even(random_num)
