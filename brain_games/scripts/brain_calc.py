@@ -5,7 +5,7 @@
 
 
 from brain_games.game_engine import main as game_engine
-from brain_games.games.game_calc import brain_game_calc
+from brain_games.games.calc import brain_game_calc
 
 
 def main():

@@ -5,7 +5,7 @@
 
 
 from brain_games.game_engine import main as game_engine
-from brain_games.games.game_progression import brain_game_progression
+from brain_games.games.progression import brain_game_progression
 
 
 def main():
