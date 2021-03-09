@@ -3,3 +3,4 @@ dist/
 .venv/
 *.swp
 venv
+.idea/
