@@ -34,20 +34,16 @@ def hide_number(progression):
             changed_progression += '{0} '.format(str(progression[index_number]))
             index_number += 1
     changed_progression = changed_progression[:len(changed_progression) - 1]
-    return (changed_progression, hidden_number)
+    return changed_progression, hidden_number
 
 
-def brain_game_progression():
+def brain_game_progression(wins_number):
     """Interacts with user and returns 'win' or 'lose'."""
-    print('What number is missing in the progression?')
-    wins_number = 0
-    while wins_number < 3:
-        (progression, hidden_number) = hide_number(generate_progression())
-        print('Question: {0}'.format(str(progression)))
-        answer = prompt.integer('Your answer: ')
-        if answer == hidden_number:
-            print('Correct!')
-            wins_number += 1
-        else:
-            return (answer, hidden_number, 'lose')
-    return 'win'
+    if wins_number == 0:
+        print('What number is missing in the progression?')
+    (progression, hidden_number) = hide_number(generate_progression())
+    print('Question: {0}'.format(str(progression)))
+    answer = prompt.integer('Your answer: ')
+    if answer == hidden_number:
+        return 'win'
+    return 'lose', answer, hidden_number
