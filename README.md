@@ -1,6 +1,6 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/isbushcar/python-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/isbushcar/python-project-lvl1/actions)
-<a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
+[![Maintainability](https://api.codeclimate.com/v1/badges/b9de309e63ba708478ea/maintainability)](https://codeclimate.com/github/isbushcar/python-project-lvl1/maintainability)
 ![Linter Status](https://github.com/isbushcar/python-project-lvl1/actions/workflows/wemake-python.yml/badge.svg)
 
 Package install and brain-even-game demonstration:
