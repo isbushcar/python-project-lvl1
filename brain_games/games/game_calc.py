@@ -29,17 +29,13 @@ def expression_generator():
         return (expression_string, expression_result)
 
 
-def brain_game_calc():
+def brain_game_calc(wins_number):
     """Interacts with user and return win or lose."""
-    print('What is the result of the expression?')
-    wins_number = 0
-    while wins_number < 3:
-        (expression_string, expression_result) = expression_generator()
-        print('Question: {0}'.format(expression_string))
-        answer = prompt.integer('Your answer: ')
-        if answer == expression_result:
-            print('Correct!')
-            wins_number += 1
-        else:
-            return (answer, expression_result, 'lose')
-    return 'win'
+    if wins_number == 0:
+        print('What is the result of the expression?')
+    (expression_string, expression_result) = expression_generator()
+    print('Question: {0}'.format(expression_string))
+    answer = prompt.integer('Your answer: ')
+    if answer == expression_result:
+        return 'win'
+    return 'lose', answer, expression_result
