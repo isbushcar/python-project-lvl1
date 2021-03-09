@@ -20,9 +20,9 @@ def is_prime(number):
 
 def brain_game_prime(wins_number):
     """Made to show question, ask answer and check if it's correct."""
+    number = random.randint(0, 100)
     if wins_number == 0:
         print('Answer "yes" if given number is prime. Otherwise answer "no".')
-    number = random.randint(0, 100)
     print('Question: {0}'.format(number))
     answer = prompt.string('Your answer: ')
     if answer == is_prime(number):
