@@ -18,17 +18,13 @@ def is_prime(number):
     return 'yes'
 
 
-def brain_game_prime():
+def brain_game_prime(wins_number):
     """Made to show question, ask answer and check if it's correct."""
-    print('Answer "yes" if given number is prime. Otherwise answer "no".')
-    wins_number = 0
-    while wins_number < 3:
-        number = random.randint(0, 100)
-        print('Question: {0}'.format(number))
-        answer = prompt.string('Your answer: ')
-        if answer == is_prime(number):
-            print('Correct!')
-            wins_number += 1
-        else:
-            return (answer, is_prime(number), 'lose')
-    return 'win'
+    if wins_number == 0:
+        print('Answer "yes" if given number is prime. Otherwise answer "no".')
+    number = random.randint(0, 100)
+    print('Question: {0}'.format(number))
+    answer = prompt.string('Your answer: ')
+    if answer == is_prime(number):
+        return 'win'
+    return 'lose', answer, is_prime(number)
