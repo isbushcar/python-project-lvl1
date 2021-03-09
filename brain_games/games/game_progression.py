@@ -27,19 +27,18 @@ def hide_number(progression):
     index_number = 0
     changed_progression = ''
     while index_number < len(progression):
-        if index_number > 0:
-            changed_progression = '{0} '.format(changed_progression)
         if index_number == number_to_hide:
-            changed_progression = '{0}..'.format(changed_progression)
+            changed_progression = '{0}.. '.format(changed_progression)
             index_number += 1
         else:
-            changed_progression += str(progression[index_number])
+            changed_progression += '{0} '.format(str(progression[index_number]))
             index_number += 1
+    changed_progression = changed_progression[:len(changed_progression) - 1]
     return (changed_progression, hidden_number)
 
 
 def brain_game_progression():
-    """Interacts with user and return 'win' or 'lose'."""
+    """Interacts with user and returns 'win' or 'lose'."""
     print('What number is missing in the progression?')
     wins_number = 0
     while wins_number < 3:
