@@ -23,6 +23,7 @@ def game_end(game_result, name):
 def main(game_name):
     """Game engine."""
     name = game_start()
+    print('Hello, {0}!'.format(name))
     wins_number = 0
     while wins_number < 3:
         round_result = game_name(wins_number)
