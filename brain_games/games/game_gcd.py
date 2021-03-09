@@ -26,18 +26,13 @@ def mix_numbers(result_of_generation):
     return (number_one, number_two, divisor)
 
 
-def brain_game_gcd():
+def brain_game_gcd(wins_number):
     """Interact with user and return 'win' or 'lose'."""
-    print('Find the greatest common divisor of given numbers.')
-    wins_number = 0
-    while wins_number < 3:
-        (number_one, number_two, divisor) = mix_numbers(generate_numbers())
-        print('Question: {0} {1}'.format(number_one, number_two))
-        print(divisor)
-        answer = prompt.integer('Your answer: ')
-        if answer == divisor:
-            print('Correct!')
-            wins_number += 1
-        else:
-            return (answer, divisor, 'lose')
-    return 'win'
+    if wins_number == 0:
+        print('Find the greatest common divisor of given numbers.')
+    (number_one, number_two, divisor) = mix_numbers(generate_numbers())
+    print('Question: {0} {1}'.format(number_one, number_two))
+    answer = prompt.integer('Your answer: ')
+    if answer == divisor:
+        return 'win'
+    return 'lose', answer, divisor
