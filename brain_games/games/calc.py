@@ -15,6 +15,4 @@ def play_calc():
     return random.choice((add, sub, mul))
 
 
-def brief_calc():
-    """Made to return game briefing."""
-    return 'What is the result of the expression?'
+play_calc.briefing = 'What is the result of the expression?'
