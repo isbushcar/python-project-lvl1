@@ -4,7 +4,6 @@
 import prompt
 
 
-
 def show_game_result(game_result, name):
     """Made to get game result and user's name and return final message."""
     if game_result == 'win':
