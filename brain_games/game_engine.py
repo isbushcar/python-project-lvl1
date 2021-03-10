@@ -4,13 +4,12 @@
 import prompt
 
 
-def game_start():
-    """Welcomes user, ask and returns his name."""
-    print('Welcome to the Brain Games!')
+def get_name():
+    """Asks and returns user's name."""
     return prompt.string('May I have your name? ')
 
 
-def game_end(game_result, name):
+def show_game_result(game_result, name):
     """Made to get game result and user's name and return final message."""
     if game_result == 'win':
         print('Congratulations, {0}!'.format(name))
@@ -22,7 +21,8 @@ def game_end(game_result, name):
 
 def main(game_name):
     """Game engine."""
-    name = game_start()
+    print('Welcome to the Brain Games!')
+    name = get_name()
     print('Hello, {0}!'.format(name))
     wins_number = 0
     while wins_number < 3:
@@ -31,6 +31,6 @@ def main(game_name):
             print('Correct!')
             wins_number += 1
         else:
-            return game_end(round_result, name)
+            return show_game_result(round_result, name)
     if wins_number == 3:
-        game_end('win', name)
+        show_game_result('win', name)
