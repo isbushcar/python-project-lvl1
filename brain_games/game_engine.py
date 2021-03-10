@@ -3,6 +3,8 @@
 
 import prompt
 
+from brain_games import games
+
 
 def show_game_result(game_result, name):
     """Made to get game result and user's name and return final message."""
@@ -22,7 +24,7 @@ def main(game_name):
     print(game_name.briefing)
     wins_number = 0
     while wins_number < 3:
-        (question, correct_answer) = game_name()
+        (question, correct_answer) = game_name.play()
         print('Question: {0}'.format(question))
         user_answer = prompt.string('Your answer: ')
         if user_answer == str(correct_answer):
