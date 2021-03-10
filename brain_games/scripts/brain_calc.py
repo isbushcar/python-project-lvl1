@@ -5,9 +5,9 @@
 
 
 from brain_games.game_engine import main as game_engine
-from brain_games.games.calc import brain_game_calc
+from brain_games.games.calc import brief_calc, play_calc
 
 
 def main():
     """Made to run a brain-calc game."""
-    game_engine(brain_game_calc)
+    game_engine(play_calc, brief_calc)
