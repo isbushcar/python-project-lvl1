@@ -14,12 +14,12 @@ def show_game_result(game_result, name):
         print("Let's try again, {0}!".format(name))
 
 
-def main(game_name, brief_name):
+def main(game_name):
     """Game engine."""
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print('Hello, {0}!'.format(name))
-    print(brief_name())
+    print(game_name.briefing)
     wins_number = 0
     while wins_number < 3:
         (question, correct_answer) = game_name()
