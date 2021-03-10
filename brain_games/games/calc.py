@@ -5,7 +5,7 @@ import operator
 import random
 
 
-def play_calc():
+def play():
     """Generate expression, return string with it and its result."""
     num_a = random.randint(0, 100)
     num_b = random.randint(0, 100)
@@ -15,4 +15,4 @@ def play_calc():
     return random.choice((add, sub, mul))
 
 
-play_calc.briefing = 'What is the result of the expression?'
+briefing = 'What is the result of the expression?'
