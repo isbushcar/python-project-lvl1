@@ -5,9 +5,9 @@
 
 
 from brain_games.game_engine import main as game_engine
-from brain_games.games.prime import brain_game_prime
+from brain_games.games import prime
 
 
 def main():
-    """Made to run a brain-progression game."""
-    game_engine(brain_game_prime)
+    """Made to run a brain-prime game."""
+    game_engine(prime)

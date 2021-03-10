@@ -3,28 +3,18 @@
 
 import random
 
-import prompt
 
-
-def is_prime(number):
-    """Made to return 'yes' if number is prime and 'no' if it is not."""
+def play():
+    """Made to return number and 'yes' if it is prime or 'no' if it is not."""
+    number = random.randint(0, 100)
     if number <= 1:
-        return 'no'
+        return number, 'no'
     divisor = number - 1
     while divisor > 1:
         if number % divisor == 0:
-            return 'no'
+            return number, 'no'
         divisor -= 1
-    return 'yes'
+    return number, 'yes'
 
 
-def brain_game_prime(wins_number):
-    """Made to show question, ask answer and check if it's correct."""
-    number = random.randint(0, 100)
-    if wins_number == 0:
-        print('Answer "yes" if given number is prime. Otherwise answer "no".')
-    print('Question: {0}'.format(number))
-    answer = prompt.string('Your answer: ')
-    if answer == is_prime(number):
-        return 'win'
-    return 'lose', answer, is_prime(number)
+briefing = 'Answer "yes" if given number is prime. Otherwise answer "no".'
