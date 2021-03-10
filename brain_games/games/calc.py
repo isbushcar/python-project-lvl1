@@ -1,30 +1,18 @@
 """Contains brain-calc game."""
 
 
+import operator
 import random
 
 
 def play_calc():
     """Generate expression, return string with it and its result."""
-    operator_number = random.randint(1, 3)
-    if operator_number == 1:
-        number_a = random.randint(0, 100)
-        number_b = random.randint(0, 100)
-        expression_result = number_a + number_b
-        expression_string = '{0} + {1}'.format(str(number_a), str(number_b))
-        return expression_string, expression_result
-    if operator_number == 2:
-        number_a = random.randint(0, 100)
-        number_b = random.randint(0, number_a)
-        expression_result = number_a - number_b
-        expression_string = '{0} - {1}'.format(str(number_a), str(number_b))
-        return expression_string, expression_result
-    if operator_number == 3:
-        number_a = random.randint(0, 100)
-        number_b = random.randint(0, 10)
-        expression_result = number_a * number_b
-        expression_string = '{0} * {1}'.format(str(number_a), str(number_b))
-        return expression_string, expression_result
+    num_a = random.randint(0, 100)
+    num_b = random.randint(0, 100)
+    add = ('{0} + {1}'.format(num_a, num_b), operator.add(num_a, num_b))
+    sub = ('{0} - {1}'.format(num_a, num_b), operator.sub(num_a, num_b))
+    mul = ('{0} * {1}'.format(num_a, num_b), operator.mul(num_a, num_b))
+    return random.choice((add, sub, mul))
 
 
 def brief_calc():
