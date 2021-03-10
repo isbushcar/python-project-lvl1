@@ -19,18 +19,21 @@ def show_game_result(game_result, name):
         print("Let's try again, {0}!".format(name))
 
 
-def main(game_name):
+def main(game_name, brief_name):
     """Game engine."""
     print('Welcome to the Brain Games!')
     name = get_name()
     print('Hello, {0}!'.format(name))
+    print(brief_name())
     wins_number = 0
     while wins_number < 3:
-        round_result = game_name(wins_number)
-        if round_result == 'win':
+        (question, correct_answer) = game_name()
+        print('Question: {0}'.format(question))
+        users_answer = prompt.string('Your answer: ')
+        if users_answer == str(correct_answer):
             print('Correct!')
             wins_number += 1
         else:
-            return show_game_result(round_result, name)
+            return show_game_result(('lose', users_answer, correct_answer), name)
     if wins_number == 3:
         show_game_result('win', name)
