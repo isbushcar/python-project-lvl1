@@ -3,7 +3,6 @@
 
 import prompt
 
-from brain_games import games
 
 
 def show_game_result(game_result, name):
