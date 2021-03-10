@@ -4,6 +4,8 @@
 import operator
 import random
 
+BRIEFING = 'What is the result of the expression?'
+
 
 def play():
     """Generate expression, return string with it and its result."""
@@ -13,6 +15,3 @@ def play():
     sub = ('{0} - {1}'.format(num_a, num_b), operator.sub(num_a, num_b))
     mul = ('{0} * {1}'.format(num_a, num_b), operator.mul(num_a, num_b))
     return random.choice((add, sub, mul))
-
-
-briefing = 'What is the result of the expression?'

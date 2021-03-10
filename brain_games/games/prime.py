@@ -3,6 +3,8 @@
 
 import random
 
+BRIEFING = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+
 
 def play():
     """Made to return number and 'yes' if it is prime or 'no' if it is not."""
@@ -15,6 +17,3 @@ def play():
             return number, 'no'
         divisor -= 1
     return number, 'yes'
-
-
-briefing = 'Answer "yes" if given number is prime. Otherwise answer "no".'

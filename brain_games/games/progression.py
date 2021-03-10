@@ -3,6 +3,8 @@
 
 import random
 
+BRIEFING = 'What number is missing in the progression?'
+
 
 def generate_progression():
     """Generate progression and return it."""
@@ -34,6 +36,3 @@ def play():
             index_number += 1
     changed_progression = changed_progression[:len(changed_progression) - 1]
     return changed_progression, hidden_number
-
-
-briefing = 'What number is missing in the progression?'

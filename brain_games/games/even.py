@@ -3,6 +3,8 @@
 
 import random
 
+BRIEFING = 'Answer "yes" if the number is even, otherwise answer "no".'
+
 
 def play():
     """Made to return question and correct answer."""
@@ -10,6 +12,3 @@ def play():
     if number == 0 or number % 2 == 0:
         return number, 'yes'
     return number, 'no'
-
-
-briefing = 'Answer "yes" if the number is even, otherwise answer "no".'

@@ -19,7 +19,7 @@ def main(game_name):
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print('Hello, {0}!'.format(name))
-    print(game_name.briefing)
+    print(game_name.BRIEFING)
     wins_number = 0
     while wins_number < 3:
         (question, correct_answer) = game_name.play()

@@ -3,6 +3,8 @@
 
 import random
 
+BRIEFING = 'Find the greatest common divisor of given numbers.'
+
 
 def play():
     """Generate two numbers, return them with their greatest common divisor."""
@@ -16,6 +18,3 @@ def play():
             return '{0} {1}'.format(question[0], question[1]), divisor
         divisor -= 1
     return play()
-
-
-briefing = 'Find the greatest common divisor of given numbers.'
