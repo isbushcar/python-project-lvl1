@@ -3,8 +3,6 @@
 
 import random
 
-import prompt
-
 
 def generate_progression():
     """Generate progression and return it."""
@@ -20,8 +18,9 @@ def generate_progression():
     return progression
 
 
-def hide_number(progression):
-    """Hides number in progression and returns it with hidden number."""
+def play():
+    """Made to generate progression, hide one number and return both."""
+    progression = generate_progression()
     number_to_hide = random.randint(0, len(progression) - 1)
     hidden_number = progression[number_to_hide]
     index_number = 0
@@ -37,13 +36,4 @@ def hide_number(progression):
     return changed_progression, hidden_number
 
 
-def brain_game_progression(wins_number):
-    """Interacts with user and returns 'win' or 'lose'."""
-    if wins_number == 0:
-        print('What number is missing in the progression?')
-    (progression, hidden_number) = hide_number(generate_progression())
-    print('Question: {0}'.format(str(progression)))
-    answer = prompt.integer('Your answer: ')
-    if answer == hidden_number:
-        return 'win'
-    return 'lose', answer, hidden_number
+briefing = 'What number is missing in the progression?'
