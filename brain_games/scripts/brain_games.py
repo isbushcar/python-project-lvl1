@@ -6,8 +6,8 @@ from brain_games.cli import welcome_user
 
 
 def main():
-    """Made to print weclome message and return user's name."""
-    print('Weclome to the Brain Games!')
+    """Made to print welcome message and return user's name."""
+    print('Welcome to the Brain Games!')
     welcome_user()
 
 

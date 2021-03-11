@@ -4,7 +4,7 @@
 """Brain-calc game."""
 
 
-from brain_games.game_engine import main as game_engine
+from brain_games.game_engine import run_game as game_engine
 from brain_games.games import calc
 
 
