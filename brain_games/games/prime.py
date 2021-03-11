@@ -11,7 +11,7 @@ def play():
     number = random.randint(0, 100)
     if number <= 1:
         return number, 'no'
-    divisor = number - 1
+    divisor = number // 2
     while divisor > 1:
         if number % divisor == 0:
             return number, 'no'
