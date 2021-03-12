@@ -6,7 +6,7 @@ import random
 BRIEFING = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
-def play():
+def generate_question_and_answer():
     """Made to return number and 'yes' if it is prime or 'no' if it is not."""
     number = random.randint(0, 100)
     if number <= 1:

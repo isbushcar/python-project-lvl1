@@ -7,7 +7,7 @@ import random
 BRIEFING = 'What is the result of the expression?'
 
 
-def play():
+def generate_question_and_answer():
     """Generate expression, return string with it and its result."""
     num_a = random.randint(0, 100)
     num_b = random.randint(0, 100)
