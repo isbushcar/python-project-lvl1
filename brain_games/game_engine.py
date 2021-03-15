@@ -3,15 +3,15 @@
 import prompt
 
 
-def run_game(game_name):
+def run_game(game):
     """Game engine. Runs game and returns it's result."""
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print('Hello, {0}!'.format(name))
-    print(game_name.BRIEFING)
+    print(game.BRIEFING)
     wins_number = 0
     while wins_number < 3:
-        question, correct_answer = game_name.generate_question_and_answer()
+        question, correct_answer = game.generate_question_and_answer()
         print('Question: {0}'.format(question))
         user_answer = prompt.string('Your answer: ')
         if user_answer == str(correct_answer):
