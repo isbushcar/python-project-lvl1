@@ -9,7 +9,9 @@ BRIEFING = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 def generate_question_and_answer():
     """Made to return number and 'yes' if it is prime or 'no' if it is not."""
     number = random.randint(0, 100)
-    return (number, 'yes') if is_prime(number) else (number, 'no')
+    if is_prime(number):
+        return str(number), 'yes'
+    return str(number), 'no'
 
 
 def is_prime(number):
